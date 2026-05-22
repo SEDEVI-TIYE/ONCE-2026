@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Animado Sencillo con Puntos y Zoom</title>
+    <link rel="stylesheet" href="style_proyecto.css">
+   
+</head>
+<body>
+    <!-- Cabezote de la página -->
+    <header style="background-color: rgb(20, 0, 0);">
+        <div style="display: grid;grid-template-columns: repeat(5,1fr);">
+              <div style="grid-template-columns: 1;grid-row: 1;">
+                      <img src="logo.png" width="90px" style="margin: 20px;">
+              </div>
+              <div style="grid-column: 2;grid-row: 1;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 25px;padding: 25px;">
+                      INICIO
+              </div>
+
+               <div style="grid-column: 3;grid-row: 1;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 25px;padding: 25px;">
+                      INFORMACIÓN
+              </div>
+
+              <div style="grid-column: 4;grid-row: 1;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 25px;padding: 25px;">
+                      EVENTOS
+              </div>
+
+              <div style="grid-column: 5;grid-row: 1;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 25px;padding: 25px;">
+                      CONTACTO
+              </div>
+        </div>
+    </header>
+    <!-- Estructura del Banner HTML -->
+    <div class="banner-container">
+        <!-- ¡CAMBIA ESTAS RUTAS POR TUS IMÁGENES! Puedes añadir más si quieres. -->
+        <img src="b1.jpg" alt="Imagen 1 del Banner" class="active"> <!-- La primera imagen tiene la clase 'active' -->
+        <img src="b2.jpg" alt="Imagen 2 del Banner">
+        <img src="b3.jpg" alt="Imagen 3 del Banner">
+        
+        <!-- Controles de puntos de control actualizados. 
+             He reemplazado los botones por 'span' dentro de un nuevo div. 
+             ¡Ojo! El número de 'span' debe coincidir con el número de imágenes. -->
+        <div class="controles-puntos">
+            <span class="active" onclick="irAImagen(0)"></span> <!-- El primer punto está activo inicialmente -->
+            <span onclick="irAImagen(1)"></span>
+            <span onclick="irAImagen(2)"></span>
+        </div>
+    </div>
+
+    <!-- El "motor" del banner: JavaScript -->
+    <script src="script_proyecto.js"></script>
+
+</body>
+</html>
