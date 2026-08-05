@@ -48,3 +48,48 @@ puntos.forEach((punto, i) => {
         irAImagen(i);
     });
 });
+
+
+
+/**Sección de compras del sitio web, registro de 
+ * compras recientes
+ */
+
+// Obtener elementos
+const formulario = document.getElementById("formVenta");
+const lista = document.getElementById("listaVentas");
+
+// Evento del formulario
+formulario.addEventListener("submit", function(event){
+    // Evita recargar la página
+    event.preventDefault();
+
+    // Leer datos
+    const cliente = document.getElementById("cliente").value;
+    const producto = document.getElementById("producto").value;
+    const cantidad = document.getElementById("cantidad").value;
+
+    // Validación sencilla
+    if(cliente === "" || producto === "" || cantidad === ""){
+        alert("Debe completar todos los campos.");
+        return;
+    }
+
+    // Crear el nuevo elemento <li>
+    const nuevoRegistro = document.createElement("li");
+
+    // Crear el texto
+    const texto = document.createTextNode(
+        `${cliente} compró ${cantidad} unidad(es) de ${producto}.`
+    );
+
+    // Agregar el texto al <li>
+    nuevoRegistro.appendChild(texto);
+
+    // Agregar el <li> al final de la lista
+    lista.appendChild(nuevoRegistro);
+
+    // Limpiar formulario
+    formulario.reset();
+
+});
