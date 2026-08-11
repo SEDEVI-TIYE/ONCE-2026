@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.contenedor {
+    width: 500px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.registro {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.registro button {
+    margin-top: 5px;
+}
+
