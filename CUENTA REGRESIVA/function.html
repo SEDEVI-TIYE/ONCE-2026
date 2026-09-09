@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Regresiva</title>
+
+    <link rel="stylesheet" href="function.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <section class="contador">
+
+            <h1>Cuenta Regresiva</h1>
+
+            <p class="descripcion">
+                Selecciona una fecha y hora para comenzar la cuenta regresiva.
+            </p>
+
+            <div class="configuracion">
+
+                <label for="fechaObjetivo">
+                    Fecha y hora objetivo
+                </label>
+
+                <input
+                    type="datetime-local"
+                    id="fechaObjetivo"
+                >
+
+                <button id="btnIniciar">
+                    Iniciar cuenta regresiva
+                </button>
+
+            </div>
+
+            <div id="mensaje" class="mensaje"></div>
+
+            <div class="tiempo">
+
+                <div class="unidad">
+                    <span id="dias">00</span>
+                    <small>Días</small>
+                </div>
+
+                <div class="unidad">
+                    <span id="horas">00</span>
+                    <small>Horas</small>
+                </div>
+
+                <div class="unidad">
+                    <span id="minutos">00</span>
+                    <small>Minutos</small>
+                </div>
+
+                <div class="unidad">
+                    <span id="segundos">00</span>
+                    <small>Segundos</small>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="function.js"></script>
+
+</body>
+</html>
