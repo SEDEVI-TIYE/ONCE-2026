@@ -1,0 +1,24 @@
+Nombre: Sergio
+Correo: abc@gmail.com
+Edad: 12
+------------------------------
+Nombre: Pepe
+Correo: odc@gmail.com
+Edad: 13
+------------------------------
+Nombre: Ana
+Correo: anana@gmail.com
+Edad: 234
+------------------------------
+Nombre: Sergio
+Correo: abc@gmail.com
+Edad: 32
+------------------------------
+Nombre: WE
+Correo: WE@GMAIL.COM
+Edad: 24
+------------------------------
+Nombre: Sergio
+Correo: abc@gmail.com
+Edad: 12
+------------------------------

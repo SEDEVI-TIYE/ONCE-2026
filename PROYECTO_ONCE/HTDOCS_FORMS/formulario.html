@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Sistema de registro de usuarios</h1>
+        <form id="formularioRegistro">
+             <label>
+                Nombre:
+             </label>
+             <input type="text" id="nombre" required>
+             <label>
+                Correo: 
+             </label>
+             <input type="email" id="correo" required>
+             <label>
+                Edad: 
+             </label>
+             <input type="number" id="edad" required>
+             <button type="submit">
+                Envíar
+             </button>
+        </form>
+        <h2>Usuarios registrados</h2>
+        <div id="listaRegistros"></div>
+
+    </div>
+<script src="formulario.js"></script>
+</body>
+</html>
