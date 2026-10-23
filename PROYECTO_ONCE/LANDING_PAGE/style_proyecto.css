@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow-x: hidden; /* Evita scrolls horizontales raros */
+}
+
+/* Contenedor principal del banner */
+.banner-container {
+  width: 100%;
+  height: 400px; /* ¡Ajusta esta altura según el tamaño de tus imágenes! */
+  overflow: hidden; /* Oculta lo que se salga */
+  position: relative;
+}
+
+/* Estilo para todas las imágenes dentro del banner */
+.banner-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para cubrir el área, manteniendo proporción */
+  display: none; /* Por defecto, todas ocultas */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Empieza totalmente transparente para el efecto fade */
+  transition:
+    opacity 1s ease-in-out,
+    transform 0.5s ease-in-out; /* Transición para fade y zoom */
+}
+
+/* Efecto de Zoom al hacer Hover sobre la imagen activa */
+.banner-container img.active:hover {
+  transform: scale(
+    1.1
+  ); /* Crece un 10%. Ajusta este valor (1.05 es menos, 1.2 es más) */
+}
+
+/* Estilo para la imagen "activa" */
+.banner-container img.active {
+  display: block; /* Muestra la imagen activa */
+  opacity: 1; /* Hace que sea totalmente opaca */
+}
+
+/* Contenedor de los puntos de control. Centrado abajo. */
+.controles-puntos {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px; /* Espacio entre los puntos */
+  z-index: 10;
+}
+
+/* Estilo básico para cada punto (inactivo) */
+.controles-puntos span {
+  width: 15px;
+  height: 15px;
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid white; /* Borde blanco */
+  border-radius: 50%; /* Lo hace circular */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave del fondo */
+}
+
+/* Efecto al hacer hover sobre un punto (pasa a ser blanco sólido) */
+.controles-puntos span:hover,
+.controles-puntos span.active {
+  background-color: white; /* Se rellena de blanco */
+}
+
+/*ANIMACIÓN DE IMÁGENES DE LA GALERÍA*/
+
+.galery {
+  transition: transform 0.3s ease-in-out;
+}
+
+.galery:hover {
+  transform: scale(1.1);
+}
